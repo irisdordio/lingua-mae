@@ -7,15 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>língua-mãe</title>
 </head>
 
 <body>
+
+    <style type="text/css">
+        @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=8fe72434-f14d-4813-8259-2141a49d5770&fontids=1488890,1488896");
+
+        @font-face {
+            font-family: "Helvetica Neue LT W01_51488890";
+            src: url("css/Fonts/1488890/3dac71eb-afa7-4c80-97f0-599202772905.woff2") format("woff2"), url("Fonts/1488890/34e0e4c0-c294-49bb-9a8e-1b2cafd54e32.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "Helvetica Neue LT W01_56 It";
+            src: url("css/Fonts/1488896/21c44514-f4d6-4cff-a5de-e4cac5e61aff.woff2") format("woff2"), url("Fonts/1488896/e7c4b231-76ad-47c7-a54b-5d84dcd78d0f.woff") format("woff");
+        }
+    </style>
+
     <main>
         <div class="container">
 
             <header>
-                <nav>
+
+                <div class="burger">
+                    <div class="lingua_mae"><a href="index.html">língua-mãe atelier</a></div>
+
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <div class="menu"></div>
+                    </a>
+                </div>
+
+                <nav id="myLinks">
+
                     <ul>
                         <li><a href="info.html">+ info</a></li>
                         <li><a href="contacto.html">contacto</a> </li>
@@ -25,9 +52,11 @@
 
                     <ol>
                         <li><a href="index.html">língua-mãe</a></li>
-                        <li><a href="lista.html">lista</a> / <a href="index.html" class="link-selected">grelha</a></li>
+                        <li><a href="lista.html">lista</a> / <a href="index.html" class="link-selected">grelha</a>
+                        </li>
                     </ol>
                 </nav>
+
             </header>
 
             <div class="card-grid">
@@ -35,7 +64,7 @@
                     <div class="card">
                         <img src="img/cards-0.png" alt="tichy" class="card__img">
                         <div class="card-content">
-                            <h6 class="card__title">tichy</h6>
+                            <h6 class="card__title">pizza hotline - level select vanilla vanilla</h6>
                         </div>
                     </div>
                 </a>
@@ -140,8 +169,9 @@
             </div>
 
         </div>
+
     </main>
-    <script src="script.js"></script>
+
 </body>
 
 </html>

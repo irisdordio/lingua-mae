@@ -1,3 +1,9 @@
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. 
+You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. 
+Please contact Monotype with any questions regarding Web Fonts: http://www.fontshop.com
+*/
+
 *,
 *::after,
 *::before {
@@ -35,6 +41,14 @@ main {
     margin-bottom: 0.9375rem;
 }
 
+@media screen and (max-width: 425px) {
+    main {
+        margin-bottom: 0;
+    }
+}
+
+
+
 img,
 picture {
     max-width: 100%;
@@ -49,7 +63,7 @@ select {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue LT W01_51488890";
     background: var(--brightgray);
 
     a {
@@ -76,6 +90,72 @@ body {
 
         header {
 
+            .burger {
+                display: none;
+            }
+
+            @media screen and (max-width: 425px) {
+                :root {
+                    font-size: 4vw;
+                }
+
+                .burger {
+                    display: flex;
+                    justify-content: space-between;
+                    background: var(--blue);
+                    color: var(--bitterlime);
+                    font-size: 24px;
+                    padding-inline: 20px;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+
+                    div {
+                        padding: 12px 0 0 0;
+                    }
+
+                    .lingua_mae a {
+                        color: var(--bitterlime);
+                    }
+
+                    .menu {
+                        transform: rotate(90deg);
+                        margin-bottom: -1rem;
+                    }
+
+                    .menu:after {
+                        content: '\2807';
+                        font-size: 70px;
+                        color: var(--bitterlime);
+                        line-height: 55px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 375px) {
+                .burger {
+                    div {
+                        padding: 15px 0 0 0;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 320px) {
+                .burger {
+                    div {
+                        padding: 18px 0 0 0;
+                    }
+
+                    .menu:after {
+                        font-size: 65px;
+                    }
+                }
+            }
+
             nav {
                 margin-bottom: 3rem;
                 /*margin-bottom: 6rem;*/
@@ -83,18 +163,31 @@ body {
                 ul {
                     display: flex;
                     justify-content: space-between;
-                    background: var(--blue);
                     padding-inline: 0.9375rem;
-                    padding-bottom: 0.155rem;
-                    margin-bottom: 0.9375rem;
+                    padding-bottom: 20px;
+                    margin-bottom: 18px;
                     width: 100%;
+                    background: var(--blue);
 
                     li a {
-                        font-size: 0.6rem;
-                        font-weight: bold;
                         color: var(--bitterlime);
                         text-transform: uppercase;
                         letter-spacing: 0.05em;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        li {
+                            padding: 15px 0;
+                        }
+                    }
+
+                }
+
+                @media screen and (max-width: 425px) {
+                    ul {
+                        display: block;
+                        font-size: 24px;
+                        margin-bottom: 0;
                     }
                 }
 
@@ -104,10 +197,30 @@ body {
                     padding-inline: 0.9375rem;
                     /*position: fixed;
                     width: 100%;*/
+                }
 
-                    li {
-                        font-size: 1.45rem;
+                @media screen and (max-width: 425px) {
+                    ol {
+                        display: none;
                     }
+                }
+
+                @media screen and (max-width: 1024px) {
+                    ol {
+                        padding-inline: 2rem;
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: 425px) {
+                nav {
+                    display: none;
+                    margin-bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--blue);
+                    position: fixed;
                 }
             }
         }
@@ -120,7 +233,7 @@ body {
 
             .card {
                 border-top: 9px solid var(--blue);
-                border-bottom: 9.5px solid var(--blue);
+                border-bottom: 9.3px solid var(--blue);
 
                 .card__img {
                     width: 100%;
@@ -131,22 +244,36 @@ body {
                     background: var(--bitterlime);
                     color: var(--blue);
                     align-self: end;
-                    padding: 0.2rem 0.7rem;
+                    padding: 10px 0.7rem;
 
-                    h6.card__title {
-                        font-size: 0.8rem;
-                        font-weight: normal;
+                    .card__title {
+                        font-size: 18px;
                     }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .card {
+                    border-bottom: 9px solid var(--blue);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .card-grid {
+                    grid-template-columns: 1fr 1fr;
                 }
             }
 
             a:hover {
                 color: var(--blue);
+                font-family: "Helvetica Neue LT W01_56 It";
+                text-decoration: none;
             }
         }
 
         @media screen and (max-width: 1024px) {
             .card-grid {
+                padding-inline: 2rem;
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
@@ -160,12 +287,23 @@ body {
         @media screen and (max-width: 425px) {
             .card-grid {
                 grid-template-columns: 1fr;
+                padding-inline: 20px;
+                margin-top: 73px;
             }
         }
 
-        .table-sortable th {
-            cursor: pointer;
+        @media screen and (max-width: 375px) {
+            .card-grid {
+                margin-top: 75px;
+            }
         }
+
+        @media screen and (max-width:320px) {
+            .card-grid {
+                margin-top: 78px;
+            }
+        }
+
 
         .table-sortable .th-sort-asc,
         .table-sortable .th-sort-desc {
@@ -175,7 +313,6 @@ body {
         .content-table {
             border-collapse: collapse;
             font-size: 1.5em;
-            font-family: Arial, Helvetica, sans-serif;
             min-width: 400px;
             width: 100%;
 
@@ -206,7 +343,6 @@ body {
             th,
             td {
                 font-size: 1.45rem;
-                font-weight: normal;
             }
 
             tbody tr {
@@ -216,7 +352,6 @@ body {
             tbody tr:hover {
                 background: var(--bitterlime);
                 color: var(--blue);
-                cursor: pointer;
             }
         }
 
@@ -256,7 +391,6 @@ body {
             gap: 3rem;
 
             p {
-                font-weight: normal;
                 font-size: 1.45rem;
                 line-height: 1.1em;
             }
@@ -267,7 +401,7 @@ body {
 
                 .info-extra__col {
                     h3 {
-                        font-weight: normal;
+
                         font-size: 1.45rem;
                     }
 
@@ -282,10 +416,11 @@ body {
 
         }
 
-        @media screen and (max-width: 425px) {
-            :root {
-                font-size: 4vw;
-            }
-        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        font-size: 4vw;
     }
 }
