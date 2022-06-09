@@ -64,6 +64,7 @@ select {
 
 body {
     font-family: "Helvetica Neue LT W01_51488890";
+    font-weight: normal;
     background: var(--brightgray);
 
     a {
@@ -164,10 +165,12 @@ body {
                     display: flex;
                     justify-content: space-between;
                     padding-inline: 0.9375rem;
-                    padding-bottom: 20px;
+                    padding-bottom: 12px;
+                    padding-top: 8px;
                     margin-bottom: 18px;
                     width: 100%;
                     background: var(--blue);
+                    font-size: 0.75rem;
 
                     li a {
                         color: var(--bitterlime);
@@ -183,11 +186,18 @@ body {
 
                 }
 
+                @media screen and (max-width: 1440px) {
+                    ul {
+                        font-size: 12px;
+                        padding-bottom: 5px;
+                        padding-top: 4px;
+                    }
+                }
+
                 @media screen and (max-width: 425px) {
                     ul {
                         display: block;
                         font-size: 24px;
-                        margin-bottom: 0;
                     }
                 }
 
@@ -197,6 +207,16 @@ body {
                     padding-inline: 0.9375rem;
                     /*position: fixed;
                     width: 100%;*/
+
+                    li {
+                        font-size: 2rem;
+                    }
+
+                    @media screen and (max-width: 1440px) {
+                        li {
+                            font-size: 32px;
+                        }
+                    }
                 }
 
                 @media screen and (max-width: 425px) {
@@ -221,6 +241,7 @@ body {
                     height: 100%;
                     background: var(--blue);
                     position: fixed;
+                    margin-top: -20px;
                 }
             }
         }
@@ -247,20 +268,15 @@ body {
                     padding: 10px 0.7rem;
 
                     .card__title {
-                        font-size: 18px;
+                        font-size: 0.75rem;
                     }
-                }
-            }
 
-            @media screen and (max-width: 768px) {
-                .card {
-                    border-bottom: 9px solid var(--blue);
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                .card-grid {
-                    grid-template-columns: 1fr 1fr;
+                    @media screen and (max-width: 1440px) {
+                        .card__title {
+                            font-size: 18px;
+                            line-height: 1.15em;
+                        }
+                    }
                 }
             }
 
