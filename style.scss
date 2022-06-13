@@ -108,11 +108,14 @@ body {
                     font-size: 24px;
                     padding-inline: 20px;
                     position: fixed;
+                    left: 0;
+                    right: 0;
                     top: 0;
                     width: 100%;
+                    overflow: hidden;
 
                     div {
-                        padding: 12px 0 0 0;
+                        padding: 11px 0 0 0;
                     }
 
                     .lingua_mae a {
@@ -120,15 +123,16 @@ body {
                     }
 
                     .menu {
-                        transform: rotate(90deg);
                         margin-bottom: -1rem;
+                        padding-bottom: 29px;
                     }
 
                     .menu:after {
-                        content: '\2807';
-                        font-size: 70px;
+                        content: '•••';
+                        font-size: 31px;
                         color: var(--bitterlime);
-                        line-height: 55px;
+                        letter-spacing: 0.2em;
+                        line-height: 30px;
                     }
 
                     a {
@@ -141,6 +145,7 @@ body {
                 .burger {
                     div {
                         padding: 15px 0 0 0;
+
                     }
                 }
             }
@@ -149,10 +154,6 @@ body {
                 .burger {
                     div {
                         padding: 18px 0 0 0;
-                    }
-
-                    .menu:after {
-                        font-size: 65px;
                     }
                 }
             }
